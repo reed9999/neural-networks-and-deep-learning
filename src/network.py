@@ -65,6 +65,11 @@ class Network(object):
                     j, self.evaluate(test_data), n_test)
             else:
                 print "Epoch {0} complete".format(j)
+            self.pjr_output()
+
+    def pjr_output(self, which=0):
+        print "Weights for numeral {1} are as follows:{2}".format(which, self.weights[which])
+        print "Digging in. ".format(which, self.weights[which][280:307])
 
     def update_mini_batch(self, mini_batch, eta):
         """Update the network's weights and biases by applying
