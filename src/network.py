@@ -65,28 +65,15 @@ class Network(object):
             if test_data:
                 print "Epoch {0}: {1} / {2}".format(
                     j, self.evaluate(test_data), n_test)
+                if (j % 5 == 4):
+                    self.pjr_special_debug()
             else:
                 print "Epoch {0} complete".format(j)
-            #self.pjr_graph(4)
 
-    def pjr_graph(self, which=0):
-        import matplotlib.pyplot as plt
-        #As best I can tell, each of these 30 nodes (of which I here graph 28 and 29
-        # corresponds to the 2nd dimension of weights[1], which means for example that if
-        # weights[1][4] has a high number for element 28, then the heatmap for 28 should show
-        # pixels that are likely associated with a 4. I don't know this.
-        a= np.resize(self.weights[0][28],(28,28))
-        plt.imshow(a, cmap='hot', interpolation='nearest')
-        plt.show()
-        a= np.resize(self.weights[0][29],(28,28))
-        plt.imshow(a, cmap='hot', interpolation='nearest')
-        plt.show()
 
-    def pjr_output(self, which=0):
-        print "type of weights is {0}".format(type(self.weights))
-        some_weights = self.weights[which]
-        print "Weights for numeral {0} are as follows:{1}".format(which, self.weights[which])
-        print "Digging in. ".format(which, self.weights[which][280:307])
+
+    def pjr_special_debug(self):
+        print(self.weights[1])
 
     def update_mini_batch(self, mini_batch, eta):
         """Update the network's weights and biases by applying
