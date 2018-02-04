@@ -72,8 +72,10 @@ class Network(object):
 
 
 
+
     def pjr_special_debug(self):
-        print(self.weights[1])
+        #print(self.weights[1])
+        pass
 
     def update_mini_batch(self, mini_batch, eta):
         """Update the network's weights and biases by applying

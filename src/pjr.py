@@ -4,6 +4,7 @@ mnist_loader.load_data_wrapper()
 
 import network, network2
 import pjr_more
+import matplotlib.pyplot as plt
 
 net = network.Network([784, 30, 10])
 #net = network.Network([784, 30, 25, 10])
