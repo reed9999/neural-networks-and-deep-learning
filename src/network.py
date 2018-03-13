@@ -15,6 +15,7 @@ import random
 
 # Third-party libraries
 import numpy as np
+import matplotlib.pyplot as plt
 
 class Network(object):
 
@@ -65,7 +66,9 @@ class Network(object):
             if test_data:
                 print "Epoch {0}: {1} / {2}".format(
                     j, self.evaluate(test_data), n_test)
-                if (j % 5 == 4):
+                if (j % 2 == 1):
+                # if (True):
+                    self.current_epoch = j
                     self.pjr_special_debug()
             else:
                 print "Epoch {0} complete".format(j)
@@ -74,8 +77,7 @@ class Network(object):
 
 
     def pjr_special_debug(self):
-        #print(self.weights[1])
-        pass
+        [self.show_product_for_numeral(i) for i in range(0, 10)]
 
     def update_mini_batch(self, mini_batch, eta):
         """Update the network's weights and biases by applying
@@ -141,6 +143,32 @@ class Network(object):
         """Return the vector of partial derivatives \partial C_x /
         \partial a for the output activations."""
         return (output_activations-y)
+
+    #PJR specific stuff
+    def grand_dot_product(self):
+        dot_prod = self.weights[0]
+        for i in range (1, self.num_layers-1):
+            x = self.weights[i].shape
+            y = dot_prod.shape
+            dot_prod = np.dot(self.weights[i], dot_prod)
+        return dot_prod
+
+    def show_product_for_numeral(self, numeral_of_interest):
+        numeral_array = self.grand_dot_product()[numeral_of_interest]
+        numeral_array = np.resize(numeral_array,(28,28))
+        title = "Numeral {} Epoch {}".format(numeral_of_interest, self.current_epoch)
+        plt.axes().set_title(title)
+        plt.imshow(numeral_array, cmap='hot', interpolation='nearest')
+        #plt.show()
+        self.save_product_for_numeral(numeral_of_interest)
+
+    def save_product_for_numeral(self, numeral_of_interest):
+        #df = pd.DataFrame(self.grand_dot_product()[numeral_of_interest])
+        resized = self.grand_dot_product()[numeral_of_interest].reshape((28,28))
+        #arr = np.ndarray(self.grand_dot_product()[numeral_of_interest])
+        fn = "heatmap-{}-epoch{epoch:02d}.csv".format(numeral_of_interest, epoch=self.current_epoch)
+        np.savetxt(fn, resized, delimiter=",")
+
 
 #### Miscellaneous functions
 def sigmoid(z):

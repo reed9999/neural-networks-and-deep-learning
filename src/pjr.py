@@ -1,15 +1,44 @@
+import numpy as np
 import mnist_loader
-training_data, validation_data, test_data = \
-mnist_loader.load_data_wrapper()
-
 import network, network2
 import pjr_more
-import matplotlib.pyplot as plt
+
+training_data, validation_data, test_data = \
+mnist_loader.load_data_wrapper()
 
 net = network.Network([784, 30, 10])
 #net = network.Network([784, 30, 25, 10])
 
+DEVELOPMENT = False
+if DEVELOPMENT:
+    print ("ATTENTION: Ridiculously small run to get to the part that's causing problems.")
+    num_epochs = 5
+else:
+# A real run...
+    num_epochs = 30
+net.SGD(training_data, num_epochs, 10, 3.0, test_data=test_data)
+
+grand_dot_product=net.grand_dot_product()
+
+
+#weights=net.weights
+#import numpy as np
+
+import cPickle as pickle
+pickle.dumps(grand_dot_product)
+with open('grand_dot_product.pkl', 'w') as f:
+    pickle.dump(grand_dot_product, f)
+
+
 #come back to this concept
+def pjr_silly_seeding_eight(net):
+    """enhancement of silly_seeding_seven reading from a file of the final dot product, with a bit of cleaning up."""
+    second_level = output = 8
+    canonical8 = np.loadtxt('../pjr-images/canonical-8.csv', delimiter=' ')
+    reshaped8 = canonical8.reshape(28 * 28,)
+    net.weights[0][second_level] = reshaped8
+
+
 def pjr_silly_seeding_seven(net):
     #What I'm going to try to do is weight a few first-level pixel neurons that might be expected to make a seven,
     # making them feed into second level neuron 7 (arbitrary choice but may as well make it match), and weighting that one
@@ -36,31 +65,14 @@ def pjr_intermediate_level_seeds(net):
         net.weights[1][i][0:10] = -1
         net.weights[1][i][i] = +1
 
-pjr_intermediate_level_seeds(net)
-net.SGD(training_data, 30, 10, 3.0, test_data=test_data)
+#pjr_intermediate_level_seeds(net)
+pjr_silly_seeding_eight(net)
 
+net.show_product_for_numeral(7)
 
-
-weights=net.weights
-import numpy as np
-#grand_dot_product=np.dot(np.dot(weights[2],weights[1]),weights[0])
-grand_dot_product=np.dot(weights[1],weights[0])
-
-import cPickle as pickle
-pickle.dumps(grand_dot_product)
-with open('grand_dot_product.pkl', 'w') as f:
-    pickle.dump(grand_dot_product, f)
-
-
-for i in range(0,net.num_layers-1):
-    print "Shape of the {0}th weight array is {1}".format(i, weights[i].shape)
-# x=w[1]
-
-
-
-numeral_of_interest=7
-a=np.resize(grand_dot_product[numeral_of_interest],(28,28))
-plt.imshow(a, cmap='hot', interpolation='nearest'); plt.show()
+# # numeral_of_interest=7
+# # a=np.resize(grand_dot_product[numeral_of_interest],(28,28))
+# # plt.imshow(a, cmap='hot', interpolation='nearest'); plt.show()
 # a=np.resize(p[2],(28,28))
 # plt.imshow(a, cmap='hot', interpolation='nearest'); plt.show()
 
