@@ -1,4 +1,9 @@
 # Code samples for "Neural Networks and Deep Learning"
+See branch PJR for the hacking around by Philip.
+
+What follows is Michael Neilsen's README:
+
+## Neilsen's README
 
 This repository contains code samples for my book on ["Neural Networks
 and Deep Learning"](http://neuralnetworksanddeeplearning.com).
