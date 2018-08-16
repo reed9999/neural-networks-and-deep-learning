@@ -1,7 +1,38 @@
-# Code samples for "Neural Networks and Deep Learning"
+# Philip's Experimental Play with "Neural Networks and Deep Learning"
 
-This repository contains code samples for my book on ["Neural Networks
+This repository is a fork of [code samples for Michael Neilsen's book]
+(https://github.com/mnielsen/neural-networks-and-deep-learning)
+on ["Neural Networks
 and Deep Learning"](http://neuralnetworksanddeeplearning.com).
+I include it here to demonstrate my curiosity, and in particular how I play around with code to help me better understand a machine learning concept of interest.
+
+Since I was introduced to ML in my PhD program as a social scientist, I tend
+to think a lot about ML's claim (as I understand it) to be atheoretical and
+to be better at prediction without much *a priori* theory. Since it's fun
+to be skeptical and to figure things out for oneself, I decided to play with
+the NIST handwriting examples here.
+
+This isn't intended as a finished project, just an example of exploration.
+I wondered if, given that neural networks do a really good job with the NIST
+task, wouldn't they do a slightly better job with just a little *a priori*
+theoretical help? For example, I theorize that a digit with light pixels in
+middle is disproportionately likely to be a zero because zeroes have a hole
+in the middle. So instead of seeding initial values in the NN at random, 
+wouldn't it be better to seed the layers in such a way that the pixels in 
+the middle of the zero have coefficients suggesting lighter pixels?
+
+But in fact, in my initial messing around, I found this wasn't really 
+happening, at least not noticeably. Perhaps this bolsters the claims to 
+atheoreticity. 
+
+I would like to at least clean up the documentation etc. to make it clear
+what I was attempting. For now running pjr.py is probably the best way to 
+dig into my stuff.
+
+
+
+
+## Neilsen's original README notes
 
 The code is written for Python 2.6 or 2.7. Michal Daniel Dobrzanski
 has a repository for Python 3

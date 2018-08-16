@@ -6,16 +6,53 @@ import pjr_more
 training_data, validation_data, test_data = \
 mnist_loader.load_data_wrapper()
 
-net = network.Network([784, 30, 10])
+#net = network.Network([784, 30, 10])
+net = network.Network([784, 90, 30, 10])
 #net = network.Network([784, 30, 25, 10])
 
 DEVELOPMENT = False
 if DEVELOPMENT:
-    print ("ATTENTION: Ridiculously small run to get to the part that's causing problems.")
+    print ("ATTENTION: Ridiculously small run to troubleshoot or verify functionality.")
     num_epochs = 5
 else:
 # A real run...
     num_epochs = 30
+
+
+def initial_seed_for_numeral(net, numeral):
+    """
+    What I'm doing here is rather arbitrarily taking the first 10 neurons of the 30 (or whatever) in the second layer
+    and making them into a representation of our heatmap, or of my tweaked heatmap,
+    :param net:
+    :param numeral:
+    :return:
+
+    What's hilarious: The numbers are abysmal.
+    Epoch 0: 8219 / 10000
+Epoch 1: 9217 / 10000
+Epoch 2: 9255 / 10000
+Epoch 3: 9333 / 10000
+Epoch 4: 9322 / 10000
+    """
+    try:
+        try:
+
+            canonical = np.loadtxt('../pjr-images/canonical-{}.csv'.format(numeral), delimiter=' ')
+        except ValueError:
+            canonical = np.loadtxt('../pjr-images/canonical-{}.csv'.format(numeral), delimiter=',')
+        reshaped = canonical.reshape(28 * 28, )
+        net.weights[0][numeral] = reshaped
+    except IOError:
+        print ("Oh well, {} doesn't have a file yet".format(numeral))
+
+
+
+def initial_seed(net):
+    for i in range(0,10):
+        initial_seed_for_numeral(net, i)
+
+#initial_seed(net)
+initial_seed_for_numeral(net, 8)
 net.SGD(training_data, num_epochs, 10, 3.0, test_data=test_data)
 
 grand_dot_product=net.grand_dot_product()
@@ -30,7 +67,6 @@ with open('grand_dot_product.pkl', 'w') as f:
     pickle.dump(grand_dot_product, f)
 
 
-#come back to this concept
 def pjr_silly_seeding_eight(net):
     """enhancement of silly_seeding_seven reading from a file of the final dot product, with a bit of cleaning up."""
     second_level = output = 8
@@ -66,16 +102,9 @@ def pjr_intermediate_level_seeds(net):
         net.weights[1][i][i] = +1
 
 #pjr_intermediate_level_seeds(net)
-pjr_silly_seeding_eight(net)
 
+#an example...
 net.show_product_for_numeral(7)
-
-# # numeral_of_interest=7
-# # a=np.resize(grand_dot_product[numeral_of_interest],(28,28))
-# # plt.imshow(a, cmap='hot', interpolation='nearest'); plt.show()
-# a=np.resize(p[2],(28,28))
-# plt.imshow(a, cmap='hot', interpolation='nearest'); plt.show()
-
 
 
 ###

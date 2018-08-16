@@ -66,8 +66,8 @@ class Network(object):
             if test_data:
                 print "Epoch {0}: {1} / {2}".format(
                     j, self.evaluate(test_data), n_test)
-                if (j % 2 == 1):
-                # if (True):
+                #if (j % 2 == 1):
+                if (True):
                     self.current_epoch = j
                     self.pjr_special_debug()
             else:
@@ -78,6 +78,7 @@ class Network(object):
 
     def pjr_special_debug(self):
         [self.show_product_for_numeral(i) for i in range(0, 10)]
+        self.save_all_detail()
 
     def update_mini_batch(self, mini_batch, eta):
         """Update the network's weights and biases by applying
@@ -166,8 +167,13 @@ class Network(object):
         #df = pd.DataFrame(self.grand_dot_product()[numeral_of_interest])
         resized = self.grand_dot_product()[numeral_of_interest].reshape((28,28))
         #arr = np.ndarray(self.grand_dot_product()[numeral_of_interest])
-        fn = "heatmap-{}-epoch{epoch:02d}.csv".format(numeral_of_interest, epoch=self.current_epoch)
+        fn = "../csv-output/dotprod-{}-epoch{epoch:02d}.csv".format(numeral_of_interest, epoch=self.current_epoch)
         np.savetxt(fn, resized, delimiter=",")
+
+    def save_all_detail(self):
+        for i in range(0, self.num_layers-1 ):
+            fn = "../csv-output/layer{layer:02d}-epoch{epoch:02d}.csv".format(layer=i, epoch=self.current_epoch)
+            np.savetxt(fn, self.weights[i], delimiter=',')
 
 
 #### Miscellaneous functions
