@@ -1,3 +1,9 @@
+# Specific to Philip's adaptation of the project
+csv-output
+pjr-images
+__*
+
+# Standard things to ignore
 *~
 *.org
 *.pem

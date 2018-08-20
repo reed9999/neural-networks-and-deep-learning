@@ -1,3 +1,9 @@
+# main-part-2.py
+# I hate that name, but it's a slight improvement as I remind myself what I was
+# doing with this code.
+# It seems the idea was to serialize and deserialize the products using pickle
+# so as not have to run the network each time.
+
 import cPickle as pickle
 import numpy as np
 import matplotlib.pyplot as plt
