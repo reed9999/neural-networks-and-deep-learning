@@ -4,11 +4,31 @@ This repository is a fork of [code samples for Michael Neilsen's book]
 (https://github.com/mnielsen/neural-networks-and-deep-learning)
 on ["Neural Networks
 and Deep Learning"](http://neuralnetworksanddeeplearning.com).
-I include it here to demonstrate my curiosity, and in particular how I play around with code to help me better understand a machine learning concept of interest.
+I include it here to demonstrate my curiosity, and in particular how I play 
+around with code to help me better understand a machine learning concept of interest.
 
-Since I was introduced to ML in my PhD program as a social scientist, I tend
-to think a lot about ML's claim (as I understand it) to be atheoretical and
-to be better at prediction without much *a priori* theory. Since it's fun
+## Trying it out, status and next steps
+Plainly this is messy code. Running ```python main.py``` from the src directory
+should work to get some predictions with me jimmying some of the starting values
+(I think right now only the 8). But, although I'm proud of my exploration, I'm 
+not proud of the disorganization of the code!
+
+Next steps: 
+- Parameter so we can run in "classic mode" or in whatever I want to call the 
+jimmied version.
+- Save results! No need to run every time.
+- Report results! Much better than copy/paste output.
+
+And that should be enough to make this "decent." I'd also like to: 
+
+- Work on later chapters of Nielsen's ebook. (I got a bit sidetracked on the
+    exploration reflected here.)
+
+## Background
+I was introduced to ML in some PhD classwork, but I was coming at it from
+a social scientist's perspective. Thus I tend to think a lot about ML's claim 
+(as I understand it) to be atheoretical and to be better 
+at prediction without much *a priori* theory. Since it's fun
 to be skeptical and to figure things out for oneself, I decided to play with
 the NIST handwriting examples here.
 
@@ -24,10 +44,6 @@ the middle of the zero have coefficients suggesting lighter pixels?
 But in fact, in my initial messing around, I found this wasn't really 
 happening, at least not noticeably. Perhaps this bolsters the claims to 
 atheoreticity. 
-
-I would like to at least clean up the documentation etc. to make it clear
-what I was attempting. For now running pjr.py is probably the best way to 
-dig into my stuff.
 
 
 

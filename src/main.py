@@ -19,11 +19,17 @@ import main_part_2
 training_data, validation_data, test_data = \
 mnist_loader.load_data_wrapper()
 
+class ExploratoryNetwork(network.Network):
+    pass
+
+
+DEFAULTS = [784, 90, 30, 10]
+
 #net = network.Network([784, 30, 10])
-net = network.Network([784, 90, 30, 10])
+net = ExploratoryNetwork(DEFAULTS)
 #net = network.Network([784, 30, 25, 10])
 
-DEVELOPMENT = False
+DEVELOPMENT = True
 if DEVELOPMENT:
     print ("ATTENTION: Ridiculously small run to troubleshoot or verify functionality.")
     num_epochs = 5

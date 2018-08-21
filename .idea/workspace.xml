@@ -2,35 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="af16c8c9-bf55-4719-b5f3-375673b70f7e" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/starting-weights/canonical-0.csv" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/starting-weights/canonical-1.csv" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/starting-weights/canonical-2-backup.csv" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/starting-weights/canonical-2.csv" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/starting-weights/canonical-3.csv" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/starting-weights/canonical-4.csv" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/starting-weights/canonical-5.csv" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/starting-weights/canonical-6.csv" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/starting-weights/canonical-7.csv" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/starting-weights/canonical-8-temp.csv" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/starting-weights/canonical-8.csv" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/starting-weights/canonical-9.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pjr-images/canonical-0.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/pjr-images/canonical-1.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/pjr-images/canonical-2-backup.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/pjr-images/canonical-2.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/pjr-images/canonical-3.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/pjr-images/canonical-4.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/pjr-images/canonical-5.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/pjr-images/canonical-6.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/pjr-images/canonical-7.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/pjr-images/canonical-8-temp.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/pjr-images/canonical-8.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/pjr-images/canonical-9.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/requirements.txt" beforeDir="false" afterPath="$PROJECT_DIR$/requirements.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pjr.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/main.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pjr_more.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/main_part_2.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/main.py" afterDir="false" />
     </list>
     <ignored path="data/external-nist/" />
     <ignored path="pjr-images/" />
@@ -58,28 +31,32 @@
         <counts>
           <entry key="csv" value="2" />
           <entry key="gitignore" value="1" />
+          <entry key="md" value="1" />
           <entry key="png" value="3" />
-          <entry key="py" value="4" />
+          <entry key="py" value="6" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
           <entry key="CSV" value="2" />
           <entry key="Image" value="3" />
+          <entry key="Markdown" value="1" />
           <entry key="PLAIN_TEXT" value="1" />
-          <entry key="Python" value="4" />
+          <entry key="Python" value="6" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
           <entry key="gitignore" value="130" />
-          <entry key="py" value="1482" />
+          <entry key="md" value="886" />
+          <entry key="py" value="1723" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
+          <entry key="Markdown" value="886" />
           <entry key="PLAIN_TEXT" value="130" />
-          <entry key="Python" value="1482" />
+          <entry key="Python" value="1723" />
         </counts>
       </usages-collector>
     </session>
@@ -92,24 +69,39 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/.gitignore">
+        <entry file="file://$PROJECT_DIR$/src/network.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="48">
-              <caret line="2" column="10" selection-start-line="2" selection-start-column="10" selection-end-line="2" selection-end-column="10" />
+            <state relative-caret-position="456">
+              <caret line="19" column="13" selection-start-line="19" selection-start-column="6" selection-end-line="19" selection-end-column="13" />
+              <folding>
+                <element signature="e#372#385#0" expanded="true" />
+                <element signature="e#1476#1642#0" />
+              </folding>
             </state>
           </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/pjr-images/my8.png">
-          <provider selected="true" editor-type-id="images" />
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="312">
-              <caret line="13" column="18" lean-forward="true" selection-start-line="13" selection-start-column="18" selection-end-line="13" selection-end-column="18" />
+            <state relative-caret-position="696">
+              <caret line="31" column="18" selection-start-line="31" selection-start-column="18" selection-end-line="31" selection-end-column="18" />
+              <folding>
+                <element signature="e#535#559#0" expanded="true" />
+                <marker date="1534878389875" expanded="true" signature="766:808" ph="..." />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/README.md">
+          <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+            <state split_layout="SPLIT">
+              <first_editor relative-caret-position="336">
+                <caret line="14" lean-forward="true" selection-start-line="14" selection-end-line="14" />
+              </first_editor>
+              <second_editor />
             </state>
           </provider>
         </entry>
@@ -119,18 +111,6 @@
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="144">
               <caret line="6" column="11" selection-start-line="6" selection-start-column="11" selection-end-line="6" selection-end-column="11" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/mnist_loader.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="302">
-              <caret line="42" column="53" selection-start-line="42" selection-start-column="48" selection-end-line="42" selection-end-column="53" />
-              <folding>
-                <element signature="e#325#339#0" expanded="true" />
-              </folding>
             </state>
           </provider>
         </entry>
@@ -211,6 +191,7 @@
         <option value="$PROJECT_DIR$/.gitignore" />
         <option value="$PROJECT_DIR$/src/main-part-2.py" />
         <option value="$PROJECT_DIR$/src/main_part_2.py" />
+        <option value="$PROJECT_DIR$/README.md" />
         <option value="$PROJECT_DIR$/src/main.py" />
       </list>
     </option>
@@ -249,11 +230,6 @@
               <item name="neural-networks-and-deep-learning" type="b2602c69:ProjectViewProjectNode" />
               <item name="neural-networks-and-deep-learning" type="462c0819:PsiDirectoryNode" />
               <item name="__archive" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="neural-networks-and-deep-learning" type="b2602c69:ProjectViewProjectNode" />
-              <item name="neural-networks-and-deep-learning" type="462c0819:PsiDirectoryNode" />
-              <item name="pjr-images" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="neural-networks-and-deep-learning" type="b2602c69:ProjectViewProjectNode" />
@@ -619,13 +595,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/network2.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1582">
-          <caret line="118" column="20" selection-start-line="118" selection-start-column="20" selection-end-line="118" selection-end-column="20" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/pjr-images/my0.png">
       <provider selected="true" editor-type-id="images" />
     </entry>
@@ -715,17 +684,6 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/pjr-images/canonical-0.csv" />
     <entry file="file://$PROJECT_DIR$/pjr-images/canonical-8.csv" />
-    <entry file="file://$PROJECT_DIR$/src/network.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="105" column="21" selection-start-line="105" selection-start-column="21" selection-end-line="105" selection-end-column="21" />
-          <folding>
-            <element signature="e#372#385#0" expanded="true" />
-            <element signature="e#1476#1642#0" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/.gitignore">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="48">
@@ -764,13 +722,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main_part_2.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="144">
-          <caret line="6" column="11" selection-start-line="6" selection-start-column="11" selection-end-line="6" selection-end-column="11" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/mnist_loader.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="302">
@@ -796,10 +747,49 @@
     <entry file="file://$PROJECT_DIR$/pjr-images/heatmaps/heatmap-0-epoch27.csv">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
+    <entry file="file://$PROJECT_DIR$/README.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="336">
+            <caret line="14" lean-forward="true" selection-start-line="14" selection-end-line="14" />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main_part_2.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="144">
+          <caret line="6" column="11" selection-start-line="6" selection-start-column="11" selection-end-line="6" selection-end-column="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/network2.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret selection-end-line="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/network.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="456">
+          <caret line="19" column="13" selection-start-line="19" selection-start-column="6" selection-end-line="19" selection-end-column="13" />
+          <folding>
+            <element signature="e#372#385#0" expanded="true" />
+            <element signature="e#1476#1642#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="312">
-          <caret line="13" column="18" lean-forward="true" selection-start-line="13" selection-start-column="18" selection-end-line="13" selection-end-column="18" />
+        <state relative-caret-position="696">
+          <caret line="31" column="18" selection-start-line="31" selection-start-column="18" selection-end-line="31" selection-end-column="18" />
+          <folding>
+            <element signature="e#535#559#0" expanded="true" />
+            <marker date="1534878389875" expanded="true" signature="766:808" ph="..." />
+          </folding>
         </state>
       </provider>
     </entry>
