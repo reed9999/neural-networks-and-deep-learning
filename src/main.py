@@ -10,33 +10,27 @@
 # seems to hurt performance, but the numbers catch up.
 
 
+from sys import argv
+import os
 import cPickle as pickle
 import numpy as np
 import mnist_loader
 import network, network2
 import main_part_2
 
+DEVELOPMENT = True
+THIS_FILE_DIR = os.path.dirname(os.path.abspath(__file__))
+if os.getcwd() != THIS_FILE_DIR:
+    raise RuntimeError("""For now, you have to start in the src directory.
+    Although it appears to be legacy issue, it should really be remedied.""")
 training_data, validation_data, test_data = \
-mnist_loader.load_data_wrapper()
+  mnist_loader.load_data_wrapper()
 
 class ExploratoryNetwork(network.Network):
-    pass
-
-
-DEFAULTS = [784, 90, 30, 10]
-
-#net = network.Network([784, 30, 10])
-net = ExploratoryNetwork(DEFAULTS)
-#net = network.Network([784, 30, 25, 10])
-
-DEVELOPMENT = True
-if DEVELOPMENT:
-    print ("ATTENTION: Ridiculously small run to troubleshoot or verify functionality.")
-    num_epochs = 5
-else:
-# A real run...
-    num_epochs = 30
-
+    DEFAULT_SHAPE = [784, 30, 10]
+    def __init__(self, shape=None, output=None):
+        self.shape = shape or self.DEFAULT_SHAPE
+        network.Network.__init__(self, shape)
 
 def initial_seed_for_numeral(net, numeral):
     """
@@ -48,13 +42,6 @@ def initial_seed_for_numeral(net, numeral):
     :param net:
     :param numeral:
     :return:
-
-    What's hilarious: The numbers are abysmal.
-    Epoch 0: 8219 / 10000
-Epoch 1: 9217 / 10000
-Epoch 2: 9255 / 10000
-Epoch 3: 9333 / 10000
-Epoch 4: 9322 / 10000
     """
     try:
         try:
@@ -73,23 +60,6 @@ Epoch 4: 9322 / 10000
 def initial_seed(net):
     for i in range(0,10):
         initial_seed_for_numeral(net, i)
-
-print("Eventually it will be clearer how to tweak when we do the initial seed")
-print("For now we comment or uncomment initial_seed() or "
-      "initial_seed_for_numeral()")
-#initial_seed(net)
-initial_seed_for_numeral(net, 8)
-net.SGD(training_data, num_epochs, 10, 3.0, test_data=test_data)
-
-grand_dot_product=net.grand_dot_product()
-
-
-#weights=net.weights
-#import numpy as np
-
-pickle.dumps(grand_dot_product)
-with open('grand_dot_product.pkl', 'w') as f:
-    pickle.dump(grand_dot_product, f)
 
 
 #### Below are some less enduring attempts at seeding the weights.
@@ -127,11 +97,50 @@ def pjr_intermediate_level_seeds(net):
         net.weights[1][i][0:10] = -1
         net.weights[1][i][i] = +1
 
-#pjr_intermediate_level_seeds(net)
 
-#an example...
-net.show_product_for_numeral(7)
+def main():
+    DEFAULTS = [784, 90, 30, 10]
 
+    # net = network.Network([784, 30, 10])
+    net = ExploratoryNetwork(DEFAULTS)
+    # net = network.Network([784, 30, 25, 10])
+
+    if DEVELOPMENT:
+        print ("""DEVELOPMENT=True
+
+        This is intentionally a small number of epochs.run to troubleshoot or 
+        verify functionality."""
+               )
+        num_epochs = 2
+    else:
+        # A real run...
+        num_epochs = 30
+
+    print(
+        "Eventually it will be clearer how to tweak when we do the initial seed")
+    print("For now we comment or uncomment initial_seed() or "
+          "initial_seed_for_numeral()")
+    # initial_seed(net)
+    initial_seed_for_numeral(net, 8)
+    net.SGD(training_data, num_epochs, 10, 3.0, test_data=test_data)
+
+    grand_dot_product = net.grand_dot_product()
+
+    # weights=net.weights
+    # import numpy as np
+
+    pickle.dumps(grand_dot_product)
+    with open('grand_dot_product.pkl', 'w') as f:
+        pickle.dump(grand_dot_product, f)
+
+    #pjr_intermediate_level_seeds(net)
+
+    #an example...
+    net.show_product_for_numeral(7)
+
+
+if __name__ == '__main__':
+    main()
 
 ###
 #I had added this code to network.py
