@@ -12,10 +12,13 @@ and omits many desirable features.
 #### Libraries
 # Standard library
 import random
+import os
 
 # Third-party libraries
 import numpy as np
 import matplotlib.pyplot as plt
+
+from main import PROJECT_ROOT_DIR
 
 class Network(object):
 
@@ -67,16 +70,16 @@ class Network(object):
                 print "Epoch {0}: {1} / {2}".format(
                     j, self.evaluate(test_data), n_test)
                 #if (j % 2 == 1):
-                if (True):
+                if (True):      #Added by PHILIP
                     self.current_epoch = j
-                    self.pjr_special_debug()
+                    self.extended_debug()
             else:
                 print "Epoch {0} complete".format(j)
 
 
 
 
-    def pjr_special_debug(self):
+    def extended_debug(self): #Added by PHILIP
         [self.show_product_for_numeral(i) for i in range(0, 10)]
         self.save_all_detail()
 
@@ -167,13 +170,17 @@ class Network(object):
         #df = pd.DataFrame(self.grand_dot_product()[numeral_of_interest])
         resized = self.grand_dot_product()[numeral_of_interest].reshape((28,28))
         #arr = np.ndarray(self.grand_dot_product()[numeral_of_interest])
-        fn = "../csv-output/dotprod-{}-epoch{epoch:02d}.csv".format(numeral_of_interest, epoch=self.current_epoch)
-        np.savetxt(fn, resized, delimiter=",")
+        output_dir = os.path.join(PROJECT_ROOT_DIR, 'csv-output')
+        base_fn = "dotprod-{}-epoch{epoch:02d}.csv".format(numeral_of_interest,
+                                                           epoch=self.current_epoch)
+        np.savetxt(os.path.join(output_dir, base_fn), resized, delimiter=",")
 
-    def save_all_detail(self):
+    def save_all_detail(self): #Added by PHILIP
+        output_dir = os.path.join(PROJECT_ROOT_DIR, 'csv-output')
         for i in range(0, self.num_layers-1 ):
-            fn = "../csv-output/layer{layer:02d}-epoch{epoch:02d}.csv".format(layer=i, epoch=self.current_epoch)
-            np.savetxt(fn, self.weights[i], delimiter=',')
+            base_fn = "../csv-output/layer{layer:02d}-epoch{epoch:02d}.csv".format(layer=i, epoch=self.current_epoch)
+            np.savetxt(os.path.join(output_dir, base_fn), self.weights[i],
+                       delimiter=',')
 
 
 #### Miscellaneous functions

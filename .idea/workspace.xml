@@ -2,7 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="af16c8c9-bf55-4719-b5f3-375673b70f7e" name="Default" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/main.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/mnist_loader.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/mnist_loader.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/network.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/network.py" afterDir="false" />
     </list>
     <ignored path="data/external-nist/" />
     <ignored path="pjr-images/" />
@@ -32,7 +36,7 @@
           <entry key="gitignore" value="1" />
           <entry key="md" value="1" />
           <entry key="png" value="3" />
-          <entry key="py" value="7" />
+          <entry key="py" value="11" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
@@ -41,21 +45,21 @@
           <entry key="Image" value="3" />
           <entry key="Markdown" value="1" />
           <entry key="PLAIN_TEXT" value="1" />
-          <entry key="Python" value="7" />
+          <entry key="Python" value="11" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
           <entry key="gitignore" value="130" />
-          <entry key="md" value="886" />
-          <entry key="py" value="2330" />
+          <entry key="md" value="1276" />
+          <entry key="py" value="2912" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="Markdown" value="886" />
+          <entry key="Markdown" value="1276" />
           <entry key="PLAIN_TEXT" value="130" />
-          <entry key="Python" value="2330" />
+          <entry key="Python" value="2912" />
         </counts>
       </usages-collector>
     </session>
@@ -70,8 +74,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/network.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="456">
-              <caret line="19" column="13" selection-start-line="19" selection-start-column="6" selection-end-line="19" selection-end-column="13" />
+            <state relative-caret-position="584">
+              <caret line="182" column="23" selection-start-line="182" selection-start-column="23" selection-end-line="182" selection-end-column="23" />
               <folding>
                 <element signature="e#372#385#0" expanded="true" />
                 <element signature="e#1476#1642#0" />
@@ -83,12 +87,41 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="24">
-              <caret line="151" selection-start-line="151" selection-end-line="151" />
+            <state relative-caret-position="206">
+              <caret line="18" column="7" selection-start-line="18" selection-start-column="7" selection-end-line="18" selection-end-column="7" />
               <folding>
-                <element signature="e#535#555#0" expanded="true" />
-                <marker date="1534908686451" expanded="true" signature="1097:1242" ph="..." />
-                <marker date="1534908686451" expanded="true" signature="4465:5119" ph="..." />
+                <marker date="1535055203311" expanded="true" signature="1337:1482" ph="..." />
+                <marker date="1535055203311" expanded="true" signature="4705:5723" ph="..." />
+                <marker date="1535055203311" expanded="true" signature="5564:5723" ph="..." />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/../qutebrowser/qutebrowser/qutebrowser.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="795">
+              <caret line="63" selection-start-line="61" selection-end-line="63" />
+              <folding>
+                <element signature="e#1380#1390#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/../qutebrowser/qutebrowser/app.py">
+          <provider selected="true" editor-type-id="text-editor" />
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/mnist_loader.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="739">
+              <caret line="45" column="56" selection-start-line="45" selection-start-column="56" selection-end-line="45" selection-end-column="56" />
+              <folding>
+                <element signature="e#325#334#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -97,7 +130,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/../tuneinrecordings/tuneinrecordingsapp.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state>
+            <state relative-caret-position="451">
+              <caret line="30" selection-start-line="29" selection-end-line="30" />
               <folding>
                 <element signature="e#166#175#0" expanded="true" />
               </folding>
@@ -109,8 +143,8 @@
         <entry file="file://$PROJECT_DIR$/README.md">
           <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
             <state split_layout="SPLIT">
-              <first_editor relative-caret-position="336">
-                <caret line="14" selection-start-line="14" selection-end-line="14" />
+              <first_editor>
+                <caret column="53" selection-start-column="53" selection-end-column="53" />
               </first_editor>
               <second_editor />
             </state>
@@ -124,21 +158,6 @@
               <caret line="6" column="11" selection-start-line="6" selection-start-column="11" selection-end-line="6" selection-end-column="11" />
             </state>
           </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/5/273.png">
-          <provider selected="true" editor-type-id="images" />
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/pjr-images/my6.png">
-          <provider selected="true" editor-type-id="images" />
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/pjr-images/my3.png">
-          <provider selected="true" editor-type-id="images" />
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
@@ -181,6 +200,10 @@
       <find>CPICK</find>
       <find>pick</find>
       <find>__FILE</find>
+      <find>pjr</find>
+      <find>save_all</find>
+      <find>special_</find>
+      <find>PROJE</find>
     </findStrings>
     <replaceStrings>
       <replace>-10</replace>
@@ -197,13 +220,14 @@
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/src/pjr_more.py" />
-        <option value="$PROJECT_DIR$/src/network.py" />
         <option value="$PROJECT_DIR$/src/pjr.py" />
         <option value="$PROJECT_DIR$/pjr-images/canonical-8.csv" />
         <option value="$PROJECT_DIR$/.gitignore" />
         <option value="$PROJECT_DIR$/src/main-part-2.py" />
         <option value="$PROJECT_DIR$/src/main_part_2.py" />
         <option value="$PROJECT_DIR$/README.md" />
+        <option value="$PROJECT_DIR$/src/mnist_loader.py" />
+        <option value="$PROJECT_DIR$/src/network.py" />
         <option value="$PROJECT_DIR$/src/main.py" />
       </list>
     </option>
@@ -262,7 +286,7 @@
   </component>
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../tuneinrecordings/tuneinrecordingsapp.py" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../qutebrowser/qutebrowser/app.py" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
   </component>
   <component name="RecentsManager">
@@ -583,20 +607,6 @@
     </expressions>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/../econgraphs/egapp/views.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="210">
-          <caret line="39" lean-forward="true" selection-end-line="87" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../econgraphs/egapp/models.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="42">
-          <caret line="3" selection-start-line="3" selection-end-line="3" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/../econgraphs/egapp/apps.py">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
@@ -734,16 +744,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/mnist_loader.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="302">
-          <caret line="42" column="53" selection-start-line="42" selection-start-column="48" selection-end-line="42" selection-end-column="53" />
-          <folding>
-            <element signature="e#325#339#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/5/273.png">
       <provider selected="true" editor-type-id="images" />
     </entry>
@@ -759,16 +759,6 @@
     <entry file="file://$PROJECT_DIR$/pjr-images/heatmaps/heatmap-0-epoch27.csv">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/README.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="SPLIT">
-          <first_editor relative-caret-position="336">
-            <caret line="14" selection-start-line="14" selection-end-line="14" />
-          </first_editor>
-          <second_editor />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main_part_2.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="144">
@@ -783,10 +773,56 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/../qutebrowser/qutebrowser.py">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/README.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor>
+            <caret column="53" selection-start-column="53" selection-end-column="53" />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../tuneinrecordings/tuneinrecordingsapp.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="451">
+          <caret line="30" selection-start-line="29" selection-end-line="30" />
+          <folding>
+            <element signature="e#166#175#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/mnist_loader.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="739">
+          <caret line="45" column="56" selection-start-line="45" selection-start-column="56" selection-end-line="45" selection-end-column="56" />
+          <folding>
+            <element signature="e#325#334#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../qutebrowser/qutebrowser/app.py">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../qutebrowser/qutebrowser/qutebrowser.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="795">
+          <caret line="63" selection-start-line="61" selection-end-line="63" />
+          <folding>
+            <element signature="e#1380#1390#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/network.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="456">
-          <caret line="19" column="13" selection-start-line="19" selection-start-column="6" selection-end-line="19" selection-end-column="13" />
+        <state relative-caret-position="584">
+          <caret line="182" column="23" selection-start-line="182" selection-start-column="23" selection-end-line="182" selection-end-column="23" />
           <folding>
             <element signature="e#372#385#0" expanded="true" />
             <element signature="e#1476#1642#0" />
@@ -794,23 +830,14 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../tuneinrecordings/tuneinrecordingsapp.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <folding>
-            <element signature="e#166#175#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="24">
-          <caret line="151" selection-start-line="151" selection-end-line="151" />
+        <state relative-caret-position="206">
+          <caret line="18" column="7" selection-start-line="18" selection-start-column="7" selection-end-line="18" selection-end-column="7" />
           <folding>
-            <element signature="e#535#555#0" expanded="true" />
-            <marker date="1534908686451" expanded="true" signature="1097:1242" ph="..." />
-            <marker date="1534908686451" expanded="true" signature="4465:5119" ph="..." />
+            <marker date="1535055203311" expanded="true" signature="1337:1482" ph="..." />
+            <marker date="1535055203311" expanded="true" signature="4705:5723" ph="..." />
+            <marker date="1535055203311" expanded="true" signature="5564:5723" ph="..." />
           </folding>
         </state>
       </provider>

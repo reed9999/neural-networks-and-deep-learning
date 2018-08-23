@@ -1,28 +1,34 @@
 # Philip's Experimental Play with "Neural Networks and Deep Learning"
 
-This repository is a fork of [code samples for Michael Neilsen's book]
-(https://github.com/mnielsen/neural-networks-and-deep-learning)
-on ["Neural Networks
-and Deep Learning"](http://neuralnetworksanddeeplearning.com).
+This repository is a fork of [code samples](https://github.com/mnielsen/neural-networks-and-deep-learning)
+accompanying Michael Nielsen's book [*Neural Networks
+and Deep Learning*](http://neuralnetworksanddeeplearning.com).
 I include it here to demonstrate my curiosity, and in particular how I play 
-around with code to help me better understand a machine learning concept of interest.
+around with code to help me better understand one particular aspect of ML that caught my attention.
 
 ## Trying it out, status and next steps
-Plainly this is messy code. Running ```python main.py``` from the src directory
-should work to get some predictions with me jimmying some of the starting values
-(I think right now only the 8). But, although I'm proud of my exploration, I'm 
-not proud of the disorganization of the code!
+This is messy code, but it should be self-contained. 
+
+First do the standard `pip install -r requirements.txt` as needed, perhaps in a virtual environment, to install dependencies.
+
+Then running ```python main.py``` from the src directory
+should work to get some predictions after jimmying some of the starting weights,
+which is the point of this exercise. 
 
 Next steps: 
 - Parameter so we can run in "classic mode" or in whatever I want to call the 
 jimmied version.
 - Save results! No need to run every time.
 - Report results! Much better than copy/paste output.
+- Bugs:
+  - `/home/philip/code/neural-networks-and-deep-learning/src/network.py:182: RuntimeWarning: overflow encountered in exp
+  return 1.0/(1.0+np.exp(-z))`
 
 And that should be enough to make this "decent." I'd also like to: 
 
 - Work on later chapters of Nielsen's ebook. (I got a bit sidetracked on the
     exploration reflected here.)
+
 
 ## Background
 I was introduced to ML in some PhD classwork, but I was coming at it from

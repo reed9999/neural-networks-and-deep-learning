@@ -13,6 +13,7 @@
 from sys import argv
 import os
 import cPickle as pickle
+import argparse
 import numpy as np
 import mnist_loader
 import network, network2
@@ -20,9 +21,14 @@ import main_part_2
 
 DEVELOPMENT = True
 THIS_FILE_DIR = os.path.dirname(os.path.abspath(__file__))
+PROJECT_ROOT_DIR = os.path.join(THIS_FILE_DIR, '..')
+
 if os.getcwd() != THIS_FILE_DIR:
-    raise RuntimeError("""For now, you have to start in the src directory.
-    Although it appears to be legacy issue, it should really be remedied.""")
+    # raise RuntimeError("""For now, you have to start in the src directory.
+    # Although it appears to be legacy issue, it should really be remedied.""")
+    print("""For now, you have to start in the src directory.
+    Although it appears to be legacy issue, it should really be remedied.
+    But let's try anyway.""")
 training_data, validation_data, test_data = \
   mnist_loader.load_data_wrapper()
 
@@ -129,6 +135,11 @@ def main():
     # weights=net.weights
     # import numpy as np
 
+    # Not 100% sure why I wanted to do this, but I think the idea was to
+    # save off the dot product matrix so as to do analysis on it later without
+    # rerunning the entire NN.
+
+
     pickle.dumps(grand_dot_product)
     with open('grand_dot_product.pkl', 'w') as f:
         pickle.dump(grand_dot_product, f)
@@ -139,7 +150,13 @@ def main():
     net.show_product_for_numeral(7)
 
 
+def get_argparser():
+    parser = argparse.ArgumentParser(prog='neural-networks-exploration',
+                                     description='see README.md')
+    return parser
+
 if __name__ == '__main__':
+    parser = get_argparser()
     main()
 
 ###
