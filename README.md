@@ -1,5 +1,5 @@
 # Code samples for "Neural Networks and Deep Learning"
-See branch PJR for the hacking around by Philip.
+See branch master for the hacking around by Philip.
 
 What follows is Michael Neilsen's README:
 
