@@ -2,6 +2,8 @@
 csv-output
 pjr-images
 __*
+*temp*
+.idea
 
 # Standard things to ignore
 *~

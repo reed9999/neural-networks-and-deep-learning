@@ -1,4 +1,8 @@
-# Philip's Experimental Play with "Neural Networks and Deep Learning"
+# Exploring Neural Networks by Hacking Neilsen's Implementation of MNIST Character Recognition
+
+[Start here](https://github.com/reed9999/gdelt-demo/blob/master/Start-here.ipynb).
+
+If you have Jupyter Notebook installed, run `jupyter notebook` and then via the Web GUI access `Start-here.ipynb`. 
 
 This repository is a fork of [code samples](https://github.com/mnielsen/neural-networks-and-deep-learning)
 accompanying Michael Nielsen's book [*Neural Networks

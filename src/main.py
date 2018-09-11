@@ -24,11 +24,8 @@ THIS_FILE_DIR = os.path.dirname(os.path.abspath(__file__))
 PROJECT_ROOT_DIR = os.path.join(THIS_FILE_DIR, '..')
 
 if os.getcwd() != THIS_FILE_DIR:
-    # raise RuntimeError("""For now, you have to start in the src directory.
-    # Although it appears to be legacy issue, it should really be remedied.""")
-    print("""For now, you have to start in the src directory.
-    Although it appears to be legacy issue, it should really be remedied.
-    But let's try anyway.""")
+    raise RuntimeError("""For now, you have to start in the src directory.
+    Although it appears to be legacy issue, it should really be remedied.""")
 training_data, validation_data, test_data = \
   mnist_loader.load_data_wrapper()
 
