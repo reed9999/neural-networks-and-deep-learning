@@ -20,6 +20,7 @@ import network, network2
 import main_part_2
 
 DEVELOPMENT = True
+ORIGINAL = True
 THIS_FILE_DIR = os.path.dirname(os.path.abspath(__file__))
 PROJECT_ROOT_DIR = os.path.join(THIS_FILE_DIR, '..')
 
@@ -102,10 +103,13 @@ def pjr_intermediate_level_seeds(net):
 
 
 def main():
-    DEFAULTS = [784, 90, 30, 10]
+    ALTERNATIVE_STRUCTURE = [784, 90, 30, 10]
+    DEFAULTS = [784, 30, 10]
 
-    # net = network.Network([784, 30, 10])
-    net = ExploratoryNetwork(DEFAULTS)
+    if ORIGINAL:
+        net = network.Network(DEFAULTS)
+    else:
+        net = ExploratoryNetwork(DEFAULTS)
     # net = network.Network([784, 30, 25, 10])
 
     if DEVELOPMENT:
@@ -149,7 +153,7 @@ def main():
 
 def get_argparser():
     parser = argparse.ArgumentParser(prog='neural-networks-exploration',
-                                     description='see README.md')
+                                     description='See README.md; no options being parsed yet.')
     return parser
 
 if __name__ == '__main__':

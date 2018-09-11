@@ -26,7 +26,7 @@ jimmied version.
 - Report results! Much better than copy/paste output.
 - Bugs:
   - `/home/philip/code/neural-networks-and-deep-learning/src/network.py:182: RuntimeWarning: overflow encountered in exp
-  return 1.0/(1.0+np.exp(-z))`
+  return 1.0/(1.0+np.exp(-z))` \[But note! I'm getting this running the original NN structure too, assuming I haven't accidentally broken something there.]
 
 And that should be enough to make this "decent." I'd also like to: 
 
