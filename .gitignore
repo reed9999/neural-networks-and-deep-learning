@@ -1,5 +1,5 @@
 # Specific to Philip's adaptation of the project
-csv-output
+csv-output/*
 pjr-images
 __*
 *temp*
