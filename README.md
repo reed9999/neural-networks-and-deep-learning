@@ -1,25 +1,29 @@
-# Exploring Neural Networks by Hacking Neilsen's Implementation of MNIST Character Recognition
-
-[Start here](https://github.com/reed9999/gdelt-demo/blob/master/Start-here.ipynb).
-
-If you have Jupyter Notebook installed, run `jupyter notebook` and then via the Web GUI access `Start-here.ipynb`. 
+# Exploring Neural Networks: Neilsen's Book and MNIST 
 
 This repository is a fork of [code samples](https://github.com/mnielsen/neural-networks-and-deep-learning)
-accompanying Michael Nielsen's book [*Neural Networks
+accompanying Michael Nielsen's online book [*Neural Networks
 and Deep Learning*](http://neuralnetworksanddeeplearning.com).
-I include it here to demonstrate my curiosity, and in particular how I play 
-around with code to help me better understand one particular aspect of ML that caught my attention.
+The intent is to demonstrate my curiosity and impetus to hack around 
+with other people's code to understand how something like NN really works.
+I have read through chapter 2 and am working on chapter 3 of the book, so the questions involved 
+in my "experiments" below may be addressed in later chapters.
+Even so, I learn best through an iterative, hands-on approach, so there's value to documenting my
+curiosity and trying to address it on my own.
 
-## Trying it out, status and next steps
-This is messy code, but it should be self-contained. 
+## Running from scratch 
 
-First do the standard `pip install -r requirements.txt` as needed, perhaps in a virtual environment, to install dependencies.
+First do the standard `pip install -r requirements.txt` as needed (recommended: in a virtual 
+environment) to install dependencies.
 
-Then running ```python main.py``` from the src directory
-should work to get some predictions after jimmying some of the starting weights,
-which is the point of this exercise. 
+Then run ```python main.py``` from the src directory to execute the main functionality.
 
-Next steps: 
+## The two experiments
+1. Does the last layer of neurons produce something humans can identify as looking like a 0, 1, 
+2,... 9?
+2. If I tweak the initial weights to match my intuition about "What an eight (for example) 
+looks like," does that improve predictive power?
+
+## Next steps 
 - Parameter so we can run in "classic mode" or in whatever I want to call the 
 jimmied version.
 - Save results! No need to run every time.
