@@ -6,9 +6,9 @@ and Deep Learning*](http://neuralnetworksanddeeplearning.com).
 The intent is to demonstrate my curiosity and impetus to hack around 
 with other people's code to understand how something like NN really works.
 I have read through chapter 2 and am working on chapter 3 of the book, so the questions involved 
-in my "experiments" below may be addressed in later chapters.
-Even so, I learn best through an iterative, hands-on approach, so there's value to documenting my
-curiosity and trying to address it on my own.
+in my "experiments" reflect where I am, in the middle of the book.
+Because I learn best through an iterative, hands-on approach, there's value to documenting my
+curiosity and trying to address it on my own, whether or not these questions are addressed later on..
 
 ## Running from scratch 
 
@@ -18,12 +18,23 @@ environment) to install dependencies.
 Then run ```python main.py``` from the src directory to execute the main functionality.
 
 ## The two experiments
-1. Does the last layer of neurons produce something humans can identify as looking like a 0, 1, 
-2,... 9?
-2. If I tweak the initial weights to match my intuition about "What an eight (for example) 
-looks like," does that improve predictive power?
+Two questions have emerged in my mind and led me to do further experimentation:
+
+1. If we quantify the probabilities of a "pulse" making it through all layers of neurons, we can
+get a set of 28 x 28 maps of probabilities for each pixel in the images. **Does this map should produce something humans can identify as looking somewhat like 
+the numerals 0, 1, 2, etc.?**
+
+2. **If I tweak the initial weights to match intuition about, for example, "What an eight 
+looks like," does that improve predictive power?** 
+
+It seems like it should, because the initial 
+weights have less learning to do, but it's not that simple. As in (1) I'm really interested in 
+the cross product of all the matrices for all the different levels. As a first approximation, can 
+I seed the weights in just one layer? Does this encourage the other layers to end up with something
+like an identity matrix?
 
 ## Next steps 
+(needs update)
 - Parameter so we can run in "classic mode" or in whatever I want to call the 
 jimmied version.
 - Save results! No need to run every time.
