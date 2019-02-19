@@ -18,10 +18,11 @@ environment) to install dependencies.
 Then run ```python main.py``` from the src directory to execute the main functionality.
 
 ## The two experiments
-Two questions have emerged in my mind and led me to do further experimentation:
+Two questions have emerged as I've worked through this book, 
+leading me to do further experimentation:
 
-1. If we quantify the probabilities of a "pulse" making it through all layers of neurons, we can
-get a set of 28 x 28 maps of probabilities for each pixel in the images. **Does this map should produce something humans can identify as looking somewhat like 
+1. If we think of the neural network metaphor, we can quantify the probabilities of a "pulse" making it through 
+all layers of neurons as a set of 28 x 28 maps of probabilities for each pixel in the images. **Does this map should produce something humans can identify as looking somewhat like 
 the numerals 0, 1, 2, etc.?**
 
 2. **If I tweak the initial weights to match intuition about, for example, "What an eight 
@@ -33,42 +34,31 @@ the cross product of all the matrices for all the different levels. As a first a
 I seed the weights in just one layer? Does this encourage the other layers to end up with something
 like an identity matrix?
 
+## Inputs and outputs
+
+I'm presently cleaning this up--the outputs to "research question" 1 above are mostly in 
+archive-of-images,
+named my0 through my9. 
+The "heatmaps" subdir is less useful stuff, my attempts to trace the evolution of one example epoch by epoch.
+
+Meanwhile, the inputs to RQ 2 are my attempts to simulate the heatmap I might expect for the each 
+numeral--sort of a theoretical counterpart to output from RQ 1. These are in 
+`experiments/starting-weights`, but I'm in the process of improving/simplifying them. See the 
+accompanying .xlsx.
+
 ## Next steps 
-(needs update)
-- Parameter so we can run in "classic mode" or in whatever I want to call the 
-jimmied version.
-- Save results! No need to run every time.
-- Report results! Much better than copy/paste output.
-- Bugs:
-  - `/home/philip/code/neural-networks-and-deep-learning/src/network.py:182: RuntimeWarning: overflow encountered in exp
-  return 1.0/(1.0+np.exp(-z))` \[But note! I'm getting this running the original NN structure too, assuming I haven't accidentally broken something there.]
+- Set up the experiment to emphasize the comparison at hand rather than 
+- Cleaner inputs and outputs
+- More parametrization.
 
 And that should be enough to make this "decent." I'd also like to: 
 
 - Work on later chapters of Nielsen's ebook. (I got a bit sidetracked on the
     exploration reflected here.)
+- Stray warnings:
+  - `/home/philip/code/neural-networks-and-deep-learning/src/network.py:182: RuntimeWarning: overflow encountered in exp
+  return 1.0/(1.0+np.exp(-z))` \[But note! I'm getting this running the original NN structure too, assuming I haven't accidentally broken something there.]
 
-
-## Background
-I was introduced to ML in some PhD classwork, but I was coming at it from
-a social scientist's perspective. Thus I tend to think a lot about ML's claim 
-(as I understand it) to be atheoretical and to be better 
-at prediction without much *a priori* theory. Since it's fun
-to be skeptical and to figure things out for oneself, I decided to play with
-the NIST handwriting examples here.
-
-This isn't intended as a finished project, just an example of exploration.
-I wondered if, given that neural networks do a really good job with the NIST
-task, wouldn't they do a slightly better job with just a little *a priori*
-theoretical help? For example, I theorize that a digit with light pixels in
-middle is disproportionately likely to be a zero because zeroes have a hole
-in the middle. So instead of seeding initial values in the NN at random, 
-wouldn't it be better to seed the layers in such a way that the pixels in 
-the middle of the zero have coefficients suggesting lighter pixels?
-
-But in fact, in my initial messing around, I found this wasn't really 
-happening, at least not noticeably. Perhaps this bolsters the claims to 
-atheoreticity. 
 
 
 
