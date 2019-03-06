@@ -11,6 +11,8 @@ VENV_NAME=neural-networks-and-deep-learning
 ALIAS_NAME=nn
 alias $ALIAS_NAME="source $VIRTUALENVS/$VENV_NAME/bin/activate"
 
+echo "You now have an alias that can be used to access this virtual env from a prompt like so:"
+echo "$ $ALIAS_NAME"
 # My own bash failure--can't figure out why the next line doesn't invoke the alias.
 
 # $ALIAS_NAME

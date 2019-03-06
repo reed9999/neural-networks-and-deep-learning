@@ -44,7 +44,7 @@ The "heatmaps" subdir is less useful stuff, my attempts to trace the evolution o
 Meanwhile, the inputs to RQ 2 are my attempts to simulate the heatmap I might expect for the each 
 numeral--sort of a theoretical counterpart to output from RQ 1. These are in 
 `experiments/starting-weights`, but I'm in the process of improving/simplifying them. See the 
-accompanying .xlsx.
+`accompanying .xlsx.
 
 ## Next steps 
 - Set up the experiment to emphasize the comparison at hand rather than 

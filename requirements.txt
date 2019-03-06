@@ -3,3 +3,6 @@ scikit-learn
 scipy
 Theano
 matplotlib
+# Following doesn't really work but doesn't hurt anything.
+python-tk
+# but 'sudo apt install python-tk' worked fine.

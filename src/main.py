@@ -34,23 +34,23 @@ training_data, validation_data, test_data = \
 
 def main():
     ALTERNATIVE_STRUCTURE = [784, 90, 30, 10]
-    DEFAULTS = [784, 30, 10]
+    DEFAULT_STRUCTURE = [784, 30, 10]
 
     if ORIGINAL:
-        net = network.Network(DEFAULTS)
+        net = network.Network(DEFAULT_STRUCTURE)
     else:
-        net = ExperimentalNetwork(DEFAULTS)
-    # net = network.Network([784, 30, 25, 10])
+        net = ExperimentalNetwork(DEFAULT_STRUCTURE)
+        # Perhaps this was buggy previously; I know it expected an absurd about of un-/commenting.
+        net.initial_seed()
 
     if DEVELOPMENT:
         print ("""DEVELOPMENT=True
 
-        This is intentionally a small number of epochs.run to troubleshoot or 
+        This is intentionally a small number of epochs. Run this to troubleshoot or 
         verify functionality."""
                )
         num_epochs = 2
     else:
-        # A real run...
         num_epochs = 30
 
     print(
@@ -58,7 +58,6 @@ def main():
     print("For now we comment or uncomment initial_seed() or "
           "initial_seed_for_numeral()")
     # initial_seed(net)
-    initial_seed_for_numeral(net, 8)
     net.SGD(training_data, num_epochs, 10, 3.0, test_data=test_data)
 
     grand_dot_product = net.grand_dot_product()
