@@ -51,9 +51,9 @@ class ExperimentalNetwork(network.Network):
             input = os.path.join('..', 'experiments','starting-weights')
             try:
 
-                canonical = np.loadtxt(os.path.join(input, 'canonical-{}.csv'.format(numeral))          , delimiter=' ')
+                canonical = np.loadtxt(os.path.join(input, 'canonical-{}.csv'.format(numeral)), delimiter=',')
             except ValueError:
-                canonical = np.loadtxt(os.path.join(input, 'canonical-{}.csv'.format(numeral)), delimiter=' ')
+                canonical = np.loadtxt(os.path.join(input, 'canonical-{}.csv'.format(numeral)), delimiter=',')
             reshaped = canonical.reshape(28 * 28, )
             self.weights[0][numeral] = reshaped
         except IOError:
