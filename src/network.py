@@ -17,6 +17,10 @@ import random
 import numpy as np
 import matplotlib.pyplot as plt
 
+# PHILIP specific -- need to unhardcode
+CSV_OUTPUT_DIR = '../output'
+# end PHILIP specific
+
 class Network(object):
 
     def __init__(self, sizes):
@@ -167,12 +171,14 @@ class Network(object):
         #df = pd.DataFrame(self.grand_dot_product()[numeral_of_interest])
         resized = self.grand_dot_product()[numeral_of_interest].reshape((28,28))
         #arr = np.ndarray(self.grand_dot_product()[numeral_of_interest])
-        fn = "../csv-output/dotprod-{}-epoch{epoch:02d}.csv".format(numeral_of_interest, epoch=self.current_epoch)
+        fn = CSV_OUTPUT_DIR + \
+             "/dotprod-{}-epoch{epoch:02d}.csv".format(numeral_of_interest, epoch=self.current_epoch)
         np.savetxt(fn, resized, delimiter=",")
 
     def save_all_detail(self): #Added by PHILIP
         for i in range(0, self.num_layers-1 ):
-            fn = "../csv-output/layer{layer:02d}-epoch{epoch:02d}.csv".format(layer=i, epoch=self.current_epoch)
+            fn = CSV_OUTPUT_DIR + \
+                 "/layer{layer:02d}-epoch{epoch:02d}.csv".format(layer=i, epoch=self.current_epoch)
             np.savetxt(fn, self.weights[i], delimiter=',')
 
 
